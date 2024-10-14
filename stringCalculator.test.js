@@ -16,5 +16,10 @@ describe('check add function',()=>{
         expect(add("1,2")).toBe(3);
     });
 
+    // Test for throwing exception on negative numbers
+    test('should throw an error if a negative number is passed', () => {
+        expect(() => add("1,-2")).toThrow("negative numbers not allowed -2");
+    });
+
 })
 
